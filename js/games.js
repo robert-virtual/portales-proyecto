@@ -1,5 +1,5 @@
 const contenedor = document.getElementById("contenedor");
-
+const loader = document.querySelector(".loader");
 async function solicitarDatos() {
   const res = await fetch("https://gamestop-api.herokuapp.com/games");
   console.log(res);
@@ -22,4 +22,7 @@ function insertarDatos(datos) {
   });
 }
 
-solicitarDatos();
+loader.classList.add("loading");
+solicitarDatos().then(() => {
+  loader.classList.remove("loading");
+});
