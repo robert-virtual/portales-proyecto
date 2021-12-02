@@ -1,6 +1,7 @@
 // obtine un elemento con el id = contenedor
 
 const contenedor = document.getElementById("contenedor"); //
+const template = document.createElement("template");
 
 // un solo elemento con al clase loader
 // . == clase, # == id
@@ -22,16 +23,25 @@ export async function solicitarDatos(url) {
   insertarDatos(datos);
 }
 
-function insertarDatos(datos = [{ img: "", price: "", name: "" }]) {
+function insertarDatos(datos = [{ img: "", price: "", name: "", link: "" }]) {
   datos.forEach((element) => {
-    const div = document.createElement("div");
     // template string
-    div.classList.add("item");
-    div.innerHTML = `
-    <img src="${element.img}" alt="${element.name}">
-    <span class="item-price">${element.price}</span>
-    <span class="item-title">${element.name}</span>
+    template.innerHTML = `
+    <a 
+      title="click para ver"
+      target="_blank" 
+      rel="noreferrer"
+      class="item"
+      href="${element.link}" 
+      >
+      <img src="${element.img}" alt="${element.name}">
+      <span class="item-price">${element.price}</span>
+      <span  class="item-title">${element.name}</span>
+      <div class="msg">
+        <span>Ver Detalles</span>
+      </div>    
+      </a>
     `;
-    contenedor.append(div);
+    contenedor.append(template.content);
   });
 }

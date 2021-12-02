@@ -1,11 +1,17 @@
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
-
+:root {
+  --item-width: 200px;
+}
 #contenedor {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--item-width), 250px));
+  gap: 1rem;
+  justify-content: center;
 }
 
 .item {
@@ -13,9 +19,8 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-}
-.item:hover {
-  box-shadow: 0 0 6px gray;
+  text-decoration: none;
+  color: black;
 }
 .item img {
   width: 188px;
@@ -25,4 +30,27 @@
   margin: 10px 0;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.item .msg {
+  position: absolute;
+  width: var(--item-width);
+  height: 5%;
+  color: white;
+  overflow: hidden;
+}
+.item .msg span {
+  border-radius: 2px;
+  padding: 2px;
+  width: fit-content;
+  position: absolute;
+  background: linear-gradient(45deg, violet, blueviolet);
+  left: 110%;
+  transition: left 0.75s;
+}
+.item:hover {
+  box-shadow: 0 0 6px gray;
+}
+.item:hover > .msg span {
+  left: 50%;
 }
