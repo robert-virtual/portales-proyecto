@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juegos | Games</title>
+    <!-- index -->
+    <link rel="preload" as="style" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- index -->
+
     <link rel="preload" href="../css/loader.css" as="style" />
     <link rel="preload" href="../css/items.css" as="style" />
 
@@ -12,12 +17,21 @@
     <link rel="stylesheet" href="../css/items.css" />
   </head>
   <body>
-    <nav>
-      <a href="/">Inicio</a>
-      <a href="#">Juegos</a>
-      <a href="consolas.html">Consolas</a>
-      <a href="about.html">Acerca de</a>
-    </nav>
+    <header>
+      <div class="interior">
+        <a href="#" class="logo" ><img src="../src/logo.png" alt="Logo"></a>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="/" ">Inicio</a></li>
+            <li><a href="#" class="active">Juegos</a></li>
+            <li><a href="consolas.html">Consolas</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
     <main>
       <h1>Juegos de PC</h1>
       <div id="contenedor">
