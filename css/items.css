@@ -4,13 +4,8 @@
 
 #contenedor {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-}
-.item-price {
-  margin: 10px 0;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .item {
@@ -24,4 +19,10 @@
 }
 .item img {
   width: 188px;
+}
+
+.item-price {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

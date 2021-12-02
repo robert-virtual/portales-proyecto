@@ -1,28 +1,3 @@
-const contenedor = document.getElementById("contenedor");
-const loader = document.querySelector(".loader");
-async function solicitarDatos() {
-  const res = await fetch("https://gamestop-api.herokuapp.com/games");
-  console.log(res);
-  const datos = await res.json();
-  console.log(datos);
-  insertarDatos(datos);
-}
+import { solicitarDatos } from "./funciones.js";
 
-function insertarDatos(datos) {
-  datos.forEach((element) => {
-    const div = document.createElement("div");
-    // template string
-    div.classList.add("item");
-    div.innerHTML = `
-    <img src="${element.img}" alt="${element.name}">
-    <span class="item-price">${element.price}</span>
-    <span class="item-title">${element.name}</span>
-    `;
-    contenedor.append(div);
-  });
-}
-
-loader.classList.add("loading");
-solicitarDatos().then(() => {
-  loader.classList.remove("loading");
-});
+solicitarDatos("https://gamestop-api.herokuapp.com/games");

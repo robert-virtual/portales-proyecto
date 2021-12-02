@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juegos | Consolas</title>
-    <link rel="preload" as="style" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-</head>
+    <link rel="preload" as="style" href="../css/loader.css" />
+    <link rel="preload" as="style" href="../css/items.css" />
+    <link rel="stylesheet" href="../css/items.css" />
+    <link rel="stylesheet" href="../css/loader.css" />
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="games.html">Juegos</a>
+      <a href="#">Consolas</a>
+      <a href="about.html">Acerca de</a>
+    </nav>
     <main>
-        <h1>Consolas</h1>
-        <div id="contenedor"></div>
+      <h1>Consolas</h1>
+      <div id="contenedor">
+        <div class="loader">
+          <div class="circulo"></div>
+        </div>
+      </div>
     </main>
 
-    <script src="../js/consolas.js"></script>
-</body>
-
+    <script type="module" src="../js/consolas.js"></script>
+  </body>
 </html>
