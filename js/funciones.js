@@ -10,17 +10,18 @@ const loader = document.querySelector(".loader");
 export async function solicitarDatos(url) {
   // activar laoder
   loader.classList.add("loading");
+  try {
+    // texto o json
+    const res = await fetch(url); // esperando
 
-  // texto o json
-  const res = await fetch(url); // esperando
-
-  // convertir a objetos de javacript
-  const datos = await res.json(); // esperando
-
+    // convertir a objetos de javacript
+    const datos = await res.json(); // esperando
+    insertarDatos(datos);
+  } catch (error) {
+    insertarError("Ups ha habido un error");
+  }
   // quitar loader
   loader.classList.remove("loading");
-
-  insertarDatos(datos);
 }
 
 function insertarDatos(datos = [{ img: "", price: "", name: "", link: "" }]) {
@@ -44,4 +45,14 @@ function insertarDatos(datos = [{ img: "", price: "", name: "", link: "" }]) {
     `;
     contenedor.append(template.content);
   });
+}
+
+function insertarError(msg) {
+  const div = document.createElement("div");
+  div.classList = "error visible";
+  div.innerHTML = `
+  <img src="https://cdn-icons-png.flaticon.com/512/2026/2026502.png" alt="error">
+  <p>${msg}</p>
+  `;
+  contenedor.append(div);
 }

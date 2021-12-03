@@ -1,4 +1,5 @@
-.loader {
+.loader,
+.error {
   /*centra el circulo*/
 
   display: none; /*no se mira*/
@@ -6,6 +7,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.visible {
+  display: initial;
+}
+
+.error p {
+  font-size: 1.5rem;
+}
+.error img {
+  width: 188px;
 }
 .circulo {
   /*circulo*/
