@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/items.css" />
     <title>Home</title>
+    <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -19,25 +20,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- fontawesome -->
   </head>
 
   <body>
-    <header>
+    <nav>
       <div class="interior">
         <a href="#" class="logo"><img src="img/logo.png" alt="Logo" /></a>
-        <nav class="navegacion">
-          <ul>
-            <li><a href="#" class="active">Inicio</a></li>
-            <li><a href=" pages/games.html">Juegos</a></li>
-            <li><a href="pages/accesorios.html">Accesorios</a></li>
-            <li><a href="pages/consolas.html">Consolas</a></li>
-            <li><a href="pages/about.html">Acerca de</a></li>
-            <li><a href="pages/contactos.html">Contactos</a></li>
-
-          </ul>
-        </nav>
+        <input type="checkbox" id="menu" />
+        <ul class="navegacion">
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="pages/games.html">Juegos</a></li>
+          <li><a href="pages/accesorios.html">Accesorios</a></li>
+          <li><a href="pages/consolas.html">Consolas</a></li>
+          <li><a href="pages/about.html">Acerca de</a></li>
+          <li><a href="pages/contactos.html">Contactos</a></li>
+        </ul>
       </div>
-    </header>
+      <label class="bars" for="menu">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
     <main>
       <h1>Gaming Legends</h1>
       <div id="contenedor"></div>

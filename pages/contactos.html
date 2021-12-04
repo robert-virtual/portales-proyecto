@@ -22,23 +22,24 @@
   </head>
 
   <body>
-    <header>
+    <nav>
       <div class="interior">
-        <a href="../index.html" class="logo">
-          <img src="../img/logo.png" alt="Logo" />
-        </a>
-        <nav class="navegacion">
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="games.html">Juegos</a></li>
-            <li><a href="accesorios.html">Accesorios</a></li>
-            <li><a href="consolas.html">Consolas</a></li>
-            <li><a href="about.html">Acerca de</a></li>
-            <li><a href="#" class="active">Contactos</a></li>
-          </ul>
-        </nav>
+        <a href="#" class="logo"><img src="../img/logo.png" alt="Logo" /></a>
+        <input type="checkbox" id="menu" />
+
+        <ul class="navegacion">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="games.html">Juegos</a></li>
+          <li><a href="accesorios.html">Accesorios</a></li>
+          <li><a href="consolas.html">Consolas</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="#" class="active">Contactos</a></li>
+        </ul>
       </div>
-    </header>
+      <label class="bars" for="menu">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
     <main>
       <h1>Contactos</h1>
       <div id="contenedor"></div>
