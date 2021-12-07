@@ -1,3 +1,4 @@
+/*todos los elementos  */
 * {
   padding: 0;
   margin: 0;
@@ -16,11 +17,12 @@
 
 .item {
   display: flex;
+  border: gray solid 1px;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  text-decoration: none;
   color: black;
+  transition: all 0.5s;
 }
 .item img {
   width: 188px;
@@ -32,25 +34,11 @@
   font-weight: bold;
 }
 
-.item .msg {
-  position: absolute;
-  width: var(--item-width);
-  height: 5%;
-  color: white;
-  overflow: hidden;
-}
-.item .msg span {
-  border-radius: 2px;
-  padding: 2px;
-  width: fit-content;
-  position: absolute;
-  background: linear-gradient(45deg, violet, blueviolet);
-  left: 110%;
-  transition: left 0.75s;
-}
 .item:hover {
+  border: white solid 1px;
   box-shadow: 0 0 6px gray;
 }
-.item:hover > .msg span {
-  left: 50%;
+
+#contenedor {
+  min-height: 100vh;
 }

@@ -5,8 +5,16 @@
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
 nav {
   display: flex;
+  position: sticky;
+  z-index: 999;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   padding-right: 1rem;
@@ -77,10 +85,11 @@ nav {
     display: initial;
   }
   .navegacion {
-    display: none;
+    display: none; /*invisible*/
     flex-direction: column;
   }
   #menu:checked + .navegacion {
+    /* + == afectar elemento adyasente*/
     display: flex;
   }
   .interior {

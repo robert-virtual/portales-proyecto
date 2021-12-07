@@ -5,8 +5,12 @@ const template = document.createElement("template");
 
 // un solo elemento con al clase loader
 // . == clase, # == id
-const loader = document.querySelector(".loader");
+const loader = document.querySelector(".loader"); /* . = selector por clase */
 
+/* 
+async = funcion asincrona = hay q esperar que termine de realizar su trabajo
+
+*/
 export async function solicitarDatos(url) {
   // activar laoder
   loader.classList.add("loading");
@@ -24,7 +28,8 @@ export async function solicitarDatos(url) {
   loader.classList.remove("loading");
 }
 
-function insertarDatos(datos = [{ img: "", price: "", name: "", link: "" }]) {
+function insertarDatos(datos = [{ img: "", price: "", name: "" }]) {
+  /* inicializacion del parametro datos = con fines de documentacion */
   datos.forEach((element) => {
     // template string
     template.innerHTML = `
@@ -43,9 +48,15 @@ function insertarDatos(datos = [{ img: "", price: "", name: "", link: "" }]) {
 function insertarError(msg) {
   const div = document.createElement("div");
   div.classList = "error visible";
+
+  /* 
+    template strings
+    "hola " + name +" como esta";
+    `hola ${name} cmo esta `
+  */
   div.innerHTML = `
-  <img src="https://cdn-icons-png.flaticon.com/512/2026/2026502.png" alt="error">
-  <p>${msg}</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2026/2026502.png" alt="error">
+    <p>${msg}</p>
   `;
   contenedor.append(div);
 }
