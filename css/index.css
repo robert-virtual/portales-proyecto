@@ -137,6 +137,7 @@ div.container {
 
 .row {
   display: flex;
+  flex-direction: row;
   padding-top: 50px;
   padding-left: 90px;
   padding-right: 90px;
@@ -149,12 +150,9 @@ div.container {
 }
 
 footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: #111;
-  height: 100;
-  width: 100vw;
+  width: 100%;
+  margin-top: 1rem;
   padding-top: 20px;
   color: #fff;
 }
@@ -184,7 +182,7 @@ footer {
 
 .footer-bottom {
   background: #000;
-  width: 100vw;
+  width: 100%;
   padding: 20px;
   padding-bottom: 40px;
   text-align: center;
@@ -234,6 +232,14 @@ footer {
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  div.polaroid {
+    margin-bottom: 1rem;
+    width: 90%;
   }
 }
 .socials {
